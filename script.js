@@ -1,11 +1,16 @@
 const canvas = document.querySelector('.canvas');
 
-const canvasWidth = 16;
-const canvasHeight = 16;
+/* Get viewport width and height */
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
-function paintPixel() {
+console.log(vw);
+console.log(vh);
 
-}
+/* Set number of pixels based on size of viewport */
+const pixelSize = 10;
+const canvasWidth = Math.ceil(vw / pixelSize);    
+const canvasHeight = Math.ceil(vh / pixelSize);
 
 for (let i = 0; i < canvasWidth * canvasHeight; i++) {
     let pixel = document.createElement('div');
