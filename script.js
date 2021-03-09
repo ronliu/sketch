@@ -17,3 +17,9 @@ for (let i = 0; i < canvasWidth * canvasHeight; i++) {
     canvas.style['grid-template-rows'] = `repeat(${canvasHeight}, 1fr)`;
 }
 
+let pixels = document.querySelectorAll('.canvas-pixel');
+pixels.forEach(pixel => {
+    pixel.addEventListener('mouseover', function(e) {
+        e.currentTarget.style.background = '#FFFFFF';
+    });
+});
